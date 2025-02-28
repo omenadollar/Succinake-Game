@@ -75,7 +75,7 @@ export const useGameStore = create<GameState>((set, get) => ({
 
     if (head[0] === food[0] && head[1] === food[1]) {
       eatSound.play();
-      let newFood;
+      let newFood: number[];
       do {
         newFood = [Math.floor(Math.random() * 20), Math.floor(Math.random() * 20)];
       } while (snake.some(([x, y]) => x === newFood[0] && y === newFood[1]));
